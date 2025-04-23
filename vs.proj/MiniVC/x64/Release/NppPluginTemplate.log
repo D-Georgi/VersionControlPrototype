@@ -1,0 +1,14 @@
+﻿  GoToLineDlg.cpp
+  StaticDialog.cpp
+  NppPluginDemo.cpp
+  PluginDefinition.cpp
+     Creating library MiniVC.lib and object MiniVC.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 929 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  NppPluginTemplate.vcxproj -> F:\CSI5610\VersionControlPrototype\bin64\MiniVC.dll
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+          1 file(s) copied.
+          1 file(s) copied.

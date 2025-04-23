@@ -1,0 +1,90 @@
+/*
+ Copyright 2022 Don HO <don.h@free.fr>
+
+ This file is part of Notepad++ demo plugin.
+
+ Notepad++ demo plugin is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ GUP is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with GUP.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include <windows.h>
+#include "DockingFeature/resource.h"
+
+#define VERSION_VALUE "4.4\0"
+#define VERSION_DIGITALVALUE 4, 4, 0, 0
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION	VERSION_DIGITALVALUE
+PRODUCTVERSION	VERSION_DIGITALVALUE
+FILEFLAGSMASK	0x3fL
+FILEFLAGS 0
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+	BLOCK	"VarFileInfo"
+	BEGIN
+		VALUE	"Translation",	0x409,	1200
+	END
+	BLOCK	"StringFileInfo"
+	BEGIN
+		BLOCK "040904b0"
+		BEGIN
+			VALUE	"CompanyName",	"Don HO don.h@free.fr\0"
+			VALUE	"FileDescription",	"Plugin template for Notepad++\0"
+			VALUE	"FileVersion",	VERSION_VALUE
+			VALUE	"InternalName",	"NppPluginTemplate.dll\0"
+			VALUE	"LegalCopyright",	"Copyright 2024 by Don HO\0"
+			VALUE	"OriginalFilename",	"NppPluginTemplate.dll\0"
+			VALUE	"ProductName",	"NppPluginTemplate\0"
+			VALUE	"ProductVersion",	VERSION_VALUE
+		END
+	END
+END
+
+// Dialog resource for the file list
+IDD_FILE_LIST_DLG DIALOGEX 0, 0, 250, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select a File"
+FONT 8, "MS Sans Serif"
+BEGIN
+	CONTROL "", IDC_FILE_LIST, "SysListView32", LVS_REPORT | WS_BORDER | WS_TABSTOP, 10, 10, 230, 90
+	DEFPUSHBUTTON   "OK", IDOK, 50, 110, 60, 14
+	PUSHBUTTON      "Cancel", IDCANCEL, 130, 110, 60, 14
+END
+
+
+
+IDD_VIEW_ONLY_DLG DIALOGEX 0, 0, 300, 260
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "View Commit File"
+FONT 8, "MS Sans Serif"
+BEGIN
+	CONTROL "", IDC_VIEW_EDIT, "Edit", ES_MULTILINE | WS_BORDER | WS_VSCROLL | ES_READONLY, 10, 10, 280, 150
+	DEFPUSHBUTTON "Previous", IDC_PREV, 10, 170, 80, 14
+	DEFPUSHBUTTON "Next", IDC_NEXT, 110, 170, 80, 14
+	DEFPUSHBUTTON "Close", IDOK, 210, 170, 80, 14
+	DEFPUSHBUTTON "Rollback", IDC_ROLLBACK, 110, 190, 80, 14
+END
+
+
+
+IDD_COMMIT_MSG_DLG DIALOGEX 0, 0, 200, 100
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Commit Message"
+FONT 8, "MS Sans Serif"
+BEGIN
+	CONTROL "", IDC_COMMIT_MSG_EDIT, "Edit", ES_AUTOHSCROLL | WS_BORDER, 10, 10, 180, 20
+	DEFPUSHBUTTON   "OK", IDOK, 50, 40, 40, 14
+	PUSHBUTTON      "Cancel", IDCANCEL, 110, 40, 40, 14
+END

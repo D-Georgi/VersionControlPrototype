@@ -1,0 +1,12 @@
+﻿  PluginDefinition.cpp
+     Creating library NppPluginTemplate.lib and object NppPluginTemplate.exp
+  Generating code
+  2 of 913 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  NppPluginTemplate.vcxproj -> F:\CSI5610\Term_Project\Mini-VC\plugintemplate-4.4\bin64\NppPluginTemplate.dll
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+          1 file(s) copied.
+          1 file(s) copied.
